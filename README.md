@@ -27,8 +27,42 @@ $ import secrets
 
 the result will be a random secret key
 
-### Creating and working with database
+## Creating and working with database
 
-## Intsall ORM SQL Alchemy
+### Install ORM SQL Alchemy
 
 pip install flask-sqlalchemy
+
+## Create DB using sqlite
+
+\$ python
+
+from flaskblog import db
+
+db.create_all()
+from flaskblog import User, Post # import table template
+user_1 = User(username='tokyo', email='tokyo@japan.com', password='password')
+db.session.add(user_1)
+db.session.commit()
+
+User.query.all() - get all users
+User.query.first() - get first user
+User.query.filter_by(username='tokyo').all() - get user by filter
+User.query.get(1) - get user by id
+
+db.drop_all() - drop database
+db.create_all() - create database
+
+## Solve lint problems
+
+pip install pylint-flask
+
+In case of Visual Studio Code: Open File > Preferences > Settings > Edit in settings.json as below:
+"python.linting.pylintArgs": ["--load-plugins", "pylint_flask"]
+
+## Others
+
+### About Flask, and generally about Python
+
+1. Good suggestion if you make error
+2. Good Exception handling
