@@ -16,3 +16,13 @@ Jinja uses a template inheritance
 ### Form Validation with WTForms
 
 pip install flask-wtf
+pip install email_validator
+
+### Create a secret key
+
+CLI
+$ python
+$ import secrets
+\$ secrets.token_hex(16)
+
+the result will be a random secret key
