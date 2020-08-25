@@ -26,3 +26,9 @@ $ import secrets
 \$ secrets.token_hex(16)
 
 the result will be a random secret key
+
+### Creating and working with database
+
+## Intsall ORM SQL Alchemy
+
+pip install flask-sqlalchemy
