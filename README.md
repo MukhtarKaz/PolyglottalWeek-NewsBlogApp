@@ -70,6 +70,10 @@ Debugger Mode in Flask
 
 You can use Debugger Mode when an error throws  by entering pin from terminal where a server is running.
 
+## Creating login system
+
+pip install flask-login
+
 ## Solve lint problems
 
 pip install pylint-flask
@@ -84,7 +88,7 @@ In case of Visual Studio Code: Open File > Preferences > Settings > Edit in sett
 1. Good suggestion if you make error
 2. Good Exception handling
 3. Circular import -
-
+4. Python ternary operator - "do something" if true else "do another thing"
 
 ##  Difference between JS and Python
 
