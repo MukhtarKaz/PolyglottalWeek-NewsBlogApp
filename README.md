@@ -57,6 +57,19 @@ db.create_all() - create database
 
 Modules have been restructured
 
+## Create hash using Bcrypt
+
+pip install flask-bcrypt
+bcrypt.generate_password_hash('test') - creates bite version of hash
+bcrypt.generate_password_hash('test').decode('utf-8') - creates string version of hash
+
+check password
+bcrypt.check_password_hash(hashed password, 'password')
+
+Debugger Mode in Flask
+
+You can use Debugger Mode when an error throws  by entering pin from terminal where a server is running.
+
 ## Solve lint problems
 
 pip install pylint-flask
@@ -71,3 +84,12 @@ In case of Visual Studio Code: Open File > Preferences > Settings > Edit in sett
 1. Good suggestion if you make error
 2. Good Exception handling
 3. Circular import -
+
+
+##  Difference between JS and Python
+
+| Features      | Javascript    | Python|
+| ------------- |:-------------:| -----:|
+| Function declaration     | function | def|
+|      |      |    |
+||     |    |
