@@ -81,6 +81,9 @@ pip install pylint-flask
 In case of Visual Studio Code: Open File > Preferences > Settings > Edit in settings.json as below:
 "python.linting.pylintArgs": ["--load-plugins", "pylint_flask"]
 
+## Resize pictures by Pillow
+pip install Pillow
+
 ## Others
 
 ### About Flask, and generally about Python
