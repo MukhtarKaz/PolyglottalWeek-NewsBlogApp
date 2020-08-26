@@ -53,6 +53,10 @@ User.query.get(1) - get user by id
 db.drop_all() - drop database
 db.create_all() - create database
 
+## Create Package Structure in Flask
+
+Modules have been restructured
+
 ## Solve lint problems
 
 pip install pylint-flask
@@ -66,3 +70,4 @@ In case of Visual Studio Code: Open File > Preferences > Settings > Edit in sett
 
 1. Good suggestion if you make error
 2. Good Exception handling
+3. Circular import -
