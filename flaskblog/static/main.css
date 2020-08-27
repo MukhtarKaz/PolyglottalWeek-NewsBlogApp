@@ -35,10 +35,13 @@ h6 {
     border: 1px solid #dddddd;
     border-radius: 3px;
     margin-bottom: 20px;
+   
 }
 
 .article-title {
     color: #444444;
+   
+
 }
 
 a.article-title:hover {

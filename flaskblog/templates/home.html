@@ -10,12 +10,35 @@
             <a class="mr-2" href="#">{{ post.author.username }}</a>
             <small class="text-muted">{{ post.date_posted.strftime('%d/%b/%Y') }}</small>
         </div>
-        <h2><a class="article-title" href="{{  url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
+        <h3><a class="article-title" href="{{  url_for('post', post_id=post.id) }}">{{ post.title }}</a></h3>
         <p class="article-content">{{ post.content }}</p>
     </div>
 </article>
 
 {% endfor %}
 
-
 {% endblock content %}
+
+{% block side %}
+
+
+<!-- x = datetime.datetime(weather.entries[0].updated)
+x.strftime('%d/%b/%Y') -->
+
+    <div class="content-section">
+        <h3>Weather News</h3>
+        <p class='text-muted'>Tokyo
+            <ul class="list-group">
+                <small class="text-muted">{{ weather.entries[0].published[0:16]}}</small>
+              
+                <li class="list-group-item list-group-item-light"> {{ weather.entries[0].summary }}</li>
+        
+
+                <!-- <li class="list-group-item list-group-item-light">Announcements</li>
+                <li class="list-group-item list-group-item-light">Calendars</li>
+                <li class="list-group-item list-group-item-light">etc</li> -->
+            </ul>
+        </p>
+    </div>
+
+{% endblock side %}

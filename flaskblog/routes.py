@@ -7,29 +7,34 @@ from flaskblog import app, db, bcrypt
 from flask_login import login_user, current_user, logout_user, login_required
 import secrets
 import os
+import feedparser
+from flaskblog.feed import parse, get_source, get_articles
+from datetime import datetime
 
 
-# posts = [
-#     {
-#         'author': 'Mukhtar Otarbayev',
-#         'title': 'First Post',
-#         'content': "WBD247 - Has the Bitcoin Bull Woken? With Anthony Pompliano",
-#         'date_posted': 'May 23, 2020'
-#     },
-#     {
-#         'author': 'Adam Doe',
-#         'title': 'Second Post',
-#         'content': "New content",
-#         'date_posted': 'May 25, 2020'
-#     }
-# ]
+url1 = 'http://www.informationweek.com/rss_simple.asp'
+url_weather = 'https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/1850147'
+
+parsed_it = parse(url1)
+feed_sourse_it= get_source(parsed_it)
+feed_articles_it= get_articles(parsed_it)
+
+parsed_weather = feedparser.parse(url_weather)
+#print(parsed_weather['entries'])
+# feed_sourse_it= get_source(parsed_it)
+# feed_articles_it= get_articles(parsed_it)
+  
+# newsfeed  
+@app.route('/newsfeed')
+def newsfeed():
+    return render_template('it-newsfeed.html', articles=feed_articles_it, sourse=feed_sourse_it)
 
 
 @app.route('/')
 @app.route('/home')
 def home():
     posts = Post.query.all()
-    return render_template('home.html', posts=posts)
+    return render_template('home.html', posts=posts, weather=parsed_weather, datetime=datetime)
 
 
 @app.route('/about')
@@ -84,7 +89,7 @@ def save_picture(pic):
     i.thumbnail(resize)
 
     i.save(pic_path)
-    return i
+    return pic_fn
 
 
 
