@@ -1,4 +1,20 @@
-### This is polyglootal week
+# "This was created during my time as a student at Code Chrysalis."
+
+#   A News Blog Application, made during the Polyglottal Week
+
+## Author
+
+- Mukhtar Otarbayev @MukhtarKaz
+
+
+##  The main purpose of the app:  
+    1. Reading IT news from Informationweek.com newsfeed RSS.
+    2. Weather news from BBC newsfeed RSS.
+    3. Posting own blogs
+    4. User can have own account
+
+
+
 
 ## Template
 
@@ -93,11 +109,3 @@ pip install Pillow
 2. Good Exception handling
 3. Circular import -
 4. Python ternary operator - "do something" if true else "do another thing"
-
-##  Difference between JS and Python
-
-| Features      | Javascript    | Python|
-| ------------- |:-------------:| -----:|
-| Function declaration     | function | def|
-|      |      |    |
-||     |    |
