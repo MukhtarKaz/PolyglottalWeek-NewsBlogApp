@@ -39,26 +39,8 @@
 
   SQL Alchemy ORM
     pip install flask-sqlalchemy
-
-## Form Validation with WTForms
-
-  pip install flask-wtf
-  pip install email_validator
-
-## Create a secret key
-
-CLI
-$ python
-$ import secrets
-\$ secrets.token_hex(16)
-
-the result will be a random secret key
-
-
-
-## Create DB using sqlite
-
-$ python
+  
+  $ python
 
 from flaskblog import db
 
@@ -77,9 +59,20 @@ User.query.get(1) - get user by id
 db.drop_all() - drop database
 db.create_all() - create database
 
-## Create Package Structure in Flask
+## Form Validation with WTForms
 
-Modules have been restructured
+  pip install flask-wtf
+  pip install email_validator
+
+## Create a secret key
+
+CLI
+$ python
+$ import secrets
+\$ secrets.token_hex(16)
+
+The result will be a random secret key
+
 
 ## Create hash using Bcrypt
 
@@ -90,9 +83,6 @@ bcrypt.generate_password_hash('test').decode('utf-8') - creates string version o
 check password
 bcrypt.check_password_hash(hashed password, 'password')
 
-Debugger Mode in Flask
-
-You can use Debugger Mode when an error throws  by entering pin from terminal where a server is running.
 
 ## Creating login system
 
@@ -104,15 +94,3 @@ pip install pylint-flask
 
 In case of Visual Studio Code: Open File > Preferences > Settings > Edit in settings.json as below:
 "python.linting.pylintArgs": ["--load-plugins", "pylint_flask"]
-
-## Resize pictures by Pillow
-pip install Pillow
-
-## Others
-
-### About Flask, and generally about Python
-
-1. Good suggestion if you make error
-2. Good Exception handling
-3. Circular import -
-4. Python ternary operator - "do something" if true else "do another thing"
