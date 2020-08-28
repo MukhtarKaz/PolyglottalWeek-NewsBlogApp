@@ -23,7 +23,7 @@ parsed_weather = feedparser.parse(url_weather)
 #print(parsed_weather['entries'])
 # feed_sourse_it= get_source(parsed_it)
 # feed_articles_it= get_articles(parsed_it)
-  
+
 # newsfeed  
 @app.route('/newsfeed')
 def newsfeed():
